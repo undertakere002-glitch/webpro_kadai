@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/airplane2/update/<%= data.id %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>ID</td><td><input type="number" name="id" value="<%= data.id %>"></td></tr>
+      <tr><td>機材名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>座席数</td><td><input type="text" name="seat" value="<%= data.seat %>"></td></tr>
+      <tr><td>全長</td><td><input type="text" name="length" value="<%= data.length %>"></td></tr>
+      <tr><td>全幅</td><td><input type="text" name="width" value="<%= data.width %>"></td></tr>
+      <tr><td>全高</td><td><input type="text" name="height" value="<%= data.height %>"></td></tr>
+      <tr><td>巡航速度</td><td><input type="text" name="speed" value="<%= data.speed %>"></td></tr>
+      <tr><td>航続距離</td><td><input type="text" name="distance" value="<%= data.distance %>"></td></tr>
+      <tr><td>最大運用高度</td><td><input type="text" name="altitude" value="<%= data.altitude %>"></td></tr>
+      <tr><td>最大離陸重量</td><td><input type="text" name="weight" value="<%= data.weight %>"></td></tr>
+      <tr><td>エンジン型式名</td><td><input type="text" name="model" value="<%= data.model %>"></td></tr>
+      <tr><td>エンジン推力</td><td><input type="text" name="power" value="<%= data.power %>"></td></tr>
+      <tr><td>搭載燃料量</td><td><input type="text" name="fuel" value="<%= data.fuel %>"></td></tr>
+
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/airplane">機材一覧に戻る</a>
+</body>
+</html>

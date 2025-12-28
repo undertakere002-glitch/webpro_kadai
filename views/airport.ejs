@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>日本国内の空港</title>
+</head>
+<body>
+  <h2>日本国内の空港の詳細</h2>
+
+  <table border="1">
+    <tr>
+      <th>ID</th><th>ICAO</th><th>IATA</th><th>空港名</th>
+    </tr>
+
+    <% for (let row of data) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.icao %></td>
+        <td><%= row.iata %></td>
+
+        <!-- ★ ここがポイント -->
+        <td>
+          <a href="/airport_detail?id=<%= row.id %>">
+            <%= row.name %>
+          </a>
+        </td>
+      </tr>
+    <% } %>
+  </table>
+
+  <a href="/airport/create">空港を追加する</a>
+
+</body>
+</html>

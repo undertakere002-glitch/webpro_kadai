@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>小田急詳細</title>
+</head>
+<body>
+  <h2><%= data.name %> の詳細</h2>
+
+  <p>ID: <%= data.id %></p>
+  <p>駅コード: <%= data.code %></p>
+  <p>駅名: <%= data.name %></p>
+  <p>停車車両: <%= data.type %></p>
+  <p>乗り換え: <%= data.change %></p>
+
+  <hr>
+  <a href="/odakyu/edit/<%= data.id %>">編集</a><br>
+  
+  <a href="/odakyu2/delete/<%= data.id %>"
+    onclick="return confirm('本当に削除しますか？');">
+   削除
+ </a><br>
+
+  <a href="/odakyu">← 一覧に戻る</a>
+</body>
+</html>

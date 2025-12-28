@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>空港を追加する</title>
+</head>
+<body>
+    <form action="/airport_add" method="POST">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" required><br>
+
+        <label for="icao">ICAO</label>
+        <input type="text" name="icao" id="icao" required><br>
+
+        <label for="iata">IATA</label>
+        <input type="text" name="iata" id="iata" required><br>
+
+        <label for="name">空港名</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="nickname">愛称</label>
+        <input type="text" name="nickname" id="nickname" required><br>
+
+        <label for="runway">滑走路</label>
+        <input type="text" name="runway" id="runway" required><br>
+
+        <label for="ft">標高（ft）</label>
+        <input type="text" name="ft" id="ft" required><br>
+
+        <label for="destination">就航路線</label>
+        <input type="text" name="destination" id="destination" required><br>
+
+        <label for="company">航空会社</label>
+        <input type="text" name="company" id="company" required><br>
+
+        <label for="location">所在地</label>
+        <input type="text" name="location" id="location" required><br>
+
+        <input type="submit" value="登録">
+    </form>
+    <a href="/airport">← 一覧に戻る</a>
+</body>
+</html>

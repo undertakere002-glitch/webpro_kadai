@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>機材詳細</title>
+</head>
+<body>
+  <h2><%= data.name %> の詳細</h2>
+
+  <p>ID: <%= data.id %></p>
+  <p>機材名: <%= data.name %></p>
+  <p>座席数: <%= data.seat %></p>
+  <p>全長: <%= data.length %></p>
+  <p>全幅: <%= data.width %></p>
+  <p>全高: <%= data.height %></p>
+  <p>巡航速度: <%= data.speed %></p>
+  <p>航続距離: <%= data.distance %></p>
+  <p>最大運用高度: <%= data.altitude %></p>
+  <p>最大離陸重量: <%= data.weight %></p>
+  <p>エンジン型式名: <%= data.model %></p>
+  <p>エンジン推力: <%= data.power %></p>
+  <p>搭載燃料量: <%= data.fuel %></p>
+
+
+  <hr>
+  <a href="/airplane/edit/<%= data.id %>">編集</a><br>
+  
+  <a href="/airplane2/delete/<%= data.id %>"
+    onclick="return confirm('本当に削除しますか？');">
+   削除
+ </a><br>
+
+  <a href="/airplane">← 一覧に戻る</a>
+</body>
+</html>

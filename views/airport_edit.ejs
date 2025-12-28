@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/airport2/update/<%= data.id %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>ID</td><td><input type="number" name="id" value="<%= data.id %>"></td></tr>
+      <tr><td>ICAO</td><td><input type="text" name="icao" value="<%= data.icao %>"></td></tr>
+      <tr><td>IATA</td><td><input type="text" name="iata" value="<%= data.iata %>"></td></tr>
+      <tr><td>空港名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>愛称</td><td><input type="text" name="nickname" value="<%= data.nickname %>"></td></tr>
+      <tr><td>滑走路</td><td><input type="text" name="runway" value="<%= data.runway %>"></td></tr>
+      <tr><td>標高（ft）</td><td><input type="text" name="ft" value="<%= data.ft %>"></td></tr>
+      <tr><td>就航路線</td><td><input type="text" name="destination" value="<%= data.destination %>"></td></tr>
+      <tr><td>航空会社</td><td><input type="text" name="company" value="<%= data.company %>"></td></tr>
+      <tr><td>所在地</td><td><input type="text" name="location" value="<%= data.location %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/airport">空港一覧に戻る</a>
+</body>
+</html>

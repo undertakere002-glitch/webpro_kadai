@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>空港詳細</title>
+</head>
+<body>
+  <h2><%= data.name %> の詳細</h2>
+
+  <p>ID: <%= data.id %></p>
+  <p>ICAO: <%= data.icao %></p>
+  <p>IATA: <%= data.iata %></p>
+  <p>愛称: <%= data.nickname %></p>
+  <p>滑走路: <%= data.runway %></p>
+  <p>標高(ft): <%= data.ft %></p>
+  <p>就航路線: <%= data.destination %></p>
+  <p>航空会社: <%= data.company %></p>
+  <p>所在地: <%= data.location %></p>
+
+  <hr>
+  <a href="/airport/edit/<%= data.id %>">編集</a><br>
+  
+  <a href="/airport2/delete/<%= data.id %>"
+    onclick="return confirm('本当に削除しますか？');">
+   削除
+ </a><br>
+
+  <a href="/airport">← 一覧に戻る</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ANAの使用機材</title>
+</head>
+<body>
+  <h2>ANAの使用機材の詳細</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th><th>機材名</th>
+    </tr>
+  
+    <% for (let row of data) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td>
+          <a href="/airplane_detail?id=<%= row.id %>">
+            <%= row.name %>
+          </a>
+        </td>
+      </tr>
+    <% } %>
+  </table>
+
+  <a href="/airplane/create">機材を追加する</a>
+</body>
+</html>
+        

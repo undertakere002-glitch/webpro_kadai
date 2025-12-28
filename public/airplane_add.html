@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>機材を追加する</title>
+</head>
+<body>
+    <form action="/airplane_add" method="POST">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" required><br>
+
+        <label for="name">機材名</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="seat">座席数</label>
+        <input type="text" name="seat" id="seat" required><br>
+
+        <label for="length">全長</label>
+        <input type="text" name="length" id="length" required><br>
+
+        <label for="width">全幅</label>
+        <input type="text" name="width" id="width" required><br>
+
+        <label for="height">全高</label>
+        <input type="text" name="height" id="height" required><br>
+
+        <label for="speed">巡航速度</label>
+        <input type="text" name="speed" id="speed" required><br>
+
+        <label for="distance">航続距離</label>
+        <input type="text" name="distance" id="distance" required><br>
+
+        <label for="altitude">最大運用高度</label>
+        <input type="text" name="altitude" id="altitude" required><br>
+
+        <label for="weight">最大離陸重量</label>
+        <input type="text" name="weight" id="weight" required><br>
+
+        <label for="model">エンジン型式名</label>
+        <input type="text" name="model" id="model" required><br>
+
+        <label for="power">エンジン推力</label>
+        <input type="text" name="power" id="power" required><br>
+
+        <label for="fuel">搭載燃料量</label>
+        <input type="text" name="fuel" id="fuel" required><br>
+
+        <input type="submit" values="登録">
+    </form>
+    <a href="/airplane">← 一覧に戻る</a>
+</body>
+</html>
