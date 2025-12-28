@@ -96,7 +96,6 @@ app.get("/airport", (req, res) => {
 app.get("/airport2/delete/:id", (req, res) => {
   const id = Number(req.params.id);
   const index = airport2.findIndex(a => a.id === id);
-
   airport2.splice(index, 1 );
   res.redirect('/airport' );
 });
